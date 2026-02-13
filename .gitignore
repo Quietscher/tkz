@@ -1,0 +1,12 @@
+tkz
+*.exe
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+.DS_Store
+
+# Claude Code
+CLAUDE.md
+.claude/
