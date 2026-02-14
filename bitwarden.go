@@ -44,7 +44,13 @@ func UnlockBWVault(password string) (string, error) {
 	if err := cmd.Run(); err != nil {
 		errMsg := strings.TrimSpace(stderr.String())
 		if errMsg == "" {
+			errMsg = strings.TrimSpace(stdout.String())
+		}
+		if errMsg == "" {
 			errMsg = err.Error()
+		}
+		if strings.Contains(errMsg, "provided key is not the expected type") {
+			errMsg = "wrong master password"
 		}
 		return "", fmt.Errorf("unlock failed: %s", errMsg)
 	}
