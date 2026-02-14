@@ -35,6 +35,15 @@ bw login
 
 ## Installation
 
+### Homebrew (macOS & Linux)
+
+```bash
+brew tap Quietscher/tkz
+brew install tkz
+```
+
+### From source
+
 ```bash
 git clone git@github.com:Quietscher/tkz.git
 cd tkz
@@ -43,6 +52,10 @@ go build -o tkz .
 # Optional: move to PATH
 mv tkz ~/.local/bin/
 ```
+
+### Binary releases
+
+Download pre-built binaries from [GitHub Releases](https://github.com/Quietscher/tkz/releases).
 
 ## Usage
 
