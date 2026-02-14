@@ -7,6 +7,9 @@ tkz
 *.out
 .DS_Store
 
+# GoReleaser
+dist/
+
 # Generated certs
 docker/certs/
 

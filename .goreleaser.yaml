@@ -1,0 +1,25 @@
+version: 2
+
+builds:
+  - env:
+      - CGO_ENABLED=0
+    goos:
+      - darwin
+      - linux
+    goarch:
+      - amd64
+      - arm64
+
+brews:
+  - repository:
+      owner: Quietscher
+      name: homebrew-tkz
+      token: "{{ .Env.HOMEBREW_TAP_GITHUB_TOKEN }}"
+    directory: Formula
+    homepage: "https://github.com/Quietscher/tkz"
+    description: "TUI OAuth token manager — get bearer tokens with one keypress"
+    license: "MIT"
+    install: |
+      bin.install "tkz"
+    test: |
+      system "#{bin}/tkz", "--version"
