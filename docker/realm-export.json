@@ -1,0 +1,24 @@
+{
+  "realm": "tkz-test",
+  "enabled": true,
+  "sslRequired": "none",
+  "clients": [
+    {
+      "clientId": "tkz-test-client",
+      "enabled": true,
+      "clientAuthenticatorType": "client-secret",
+      "secret": "tkz-test-secret",
+      "publicClient": false,
+      "serviceAccountsEnabled": true,
+      "directAccessGrantsEnabled": false,
+      "standardFlowEnabled": false,
+      "implicitFlowEnabled": false,
+      "protocol": "openid-connect",
+      "defaultClientScopes": [
+        "openid",
+        "profile",
+        "email"
+      ]
+    }
+  ]
+}

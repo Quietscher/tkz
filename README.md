@@ -2,6 +2,8 @@
 
 A terminal UI for managing OAuth clients and retrieving bearer tokens.
 
+![tkz demo](demo.gif)
+
 ![Go](https://img.shields.io/badge/Go-1.21+-00ADD8?style=flat&logo=go)
 ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 

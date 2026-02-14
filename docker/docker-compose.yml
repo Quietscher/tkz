@@ -1,0 +1,15 @@
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:latest
+    command: start-dev --import-realm
+    environment:
+      KC_HTTPS_CERTIFICATE_FILE: /opt/keycloak/certs/server.pem
+      KC_HTTPS_CERTIFICATE_KEY_FILE: /opt/keycloak/certs/server-key.pem
+      KC_HOSTNAME: localhost
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8443:8443"
+    volumes:
+      - ./certs:/opt/keycloak/certs:ro
+      - ./realm-export.json:/opt/keycloak/data/import/realm-export.json:ro
