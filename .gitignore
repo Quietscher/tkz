@@ -16,3 +16,4 @@ docker/certs/
 # Claude Code
 CLAUDE.md
 .claude/
+INFO.md
